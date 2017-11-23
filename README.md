@@ -1,5 +1,5 @@
 # Enhanced-ROI-HEVC
-These are the video links which we are using to produce frames:
+These are the video links that we are using to produce frames:
 
 1. https://www.youtube.com/watch?v=yYLxfXsLqBUSplit (Thickness Skin Graft Reconstruction Pearl: The Cerclage Reduction)
 
