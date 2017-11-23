@@ -12,6 +12,8 @@ As starting frames of videos are related to the introduction about surgical proc
     ffmpeg -i input_video.mp4 -vf "select=(not(lt(n\,1050)))*(not(mod(n\,15)))" -vsync vfr -q:v 2 wound_%d.jpg
 In the above command, 1050 is the number of frames that we want to skip from beginning.
 
+To keep numbering your images where you left in the previous video, you can simply add -start_number argument in the above command.
+
 Due to fewer number of images, we are doing image augmentation using keras and augmentor tool.
 
 In keras we are using these parameters:
