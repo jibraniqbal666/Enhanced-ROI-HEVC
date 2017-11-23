@@ -10,7 +10,7 @@ These are the video links that we are using to produce frames:
 As starting frames of videos are related to the introduction about surgical procedure so we are skipping these frames. Further, to avoid redundancy we are extracting 1 frame after every 15 frames. We are using ffmpeg tool with this command:
 
     ffmpeg -i input_video.mp4 -vf "select=(not(lt(n\,1050)))*(not(mod(n\,15)))" -vsync vfr -q:v 2 wound_%d.jpg
-1050 is the number of frames that we want to skip from beginning.
+In the above command, 1050 is the number of frames that we want to skip from beginning.
 
 Due to fewer number of images, we are doing image augmentation using keras and augmentor tool.
 
