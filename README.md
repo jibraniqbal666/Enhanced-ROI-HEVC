@@ -26,3 +26,17 @@ In keras we are using these parameters:
     shear_range=0.2,
     fill_mode='nearest',
     zoom_range=0.2
+    
+    
+automatic splitting and augmetation (on version 3)
+
+perfect formatting, if you extract 5 frames from a video, and count of augmented will also be 5 
+output will be 
+original_images [0,6,12,18,24] augmented=[1,2,3,4,5,7,8,9,10,11,13......29]
+
+for above configurations
+
+from augVer2 import split_augment
+split_augment('C:\\Users\\Ryuk666\\Downloads\\Live Surgery Foreign Body (BB) Removal from Finger.mp4',ffmpeg_bin=your_ffmpeg_downloaded_binary_path,frame_number=5, count =5)
+
+docs will be coming soon
