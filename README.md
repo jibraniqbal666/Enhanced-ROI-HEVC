@@ -44,12 +44,12 @@ SPLITING AND AUGMENTATION DOCS
             
 `split_augment(vid_path, ffmpeg_bin='C:\\Users\\Ryuk666\\Downloads\\Compressed\\ffmpeg-3.4-win64-static\\bin\\ffmpeg.exe',start=0, fps=1, frame_skip=0, count=0, frame_number=0 )`
             
- `vid_path = path to your input video 
- ffmpeg_bin = bath to your ffmpeg binary, in linux (ffmpeg_bin = 'ffmpeg') if installed using apt (default: Jibran'pc path)
- start = start count (default : 0, your image name will be wound_0.jpg)
- fps = frames per second (default: 1, 1 frame per sec)
- frame_skip = number of frame you wanna skip from start (default: 0, no frame loss)
- count = number of augment images (default: 0,  your image name will be wound_0.jpg,wound_1.jpg..., no augemented images)
- frame_number = how many frames you wanna extract from video (default: 0, total frames will be extracted )`
+ vid_path = path to your input video.
+ ffmpeg_bin = bath to your ffmpeg binary, in linux (ffmpeg_bin = 'ffmpeg') if installed using apt (default: Jibran'pc path).
+ start = start count (default : 0, your image name will be wound_0.jpg).
+ fps = frames per second (default: 1, 1 frame per sec).
+ frame_skip = number of frame you wanna skip from start (default: 0, no frame loss).
+ count = number of augment images (default: 0,  your image name will be wound_0.jpg,wound_1.jpg..., no augemented images).
+ frame_number = how many frames you wanna extract from video (default: 0, total frames will be extracted ).
 
 
