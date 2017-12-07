@@ -26,3 +26,30 @@ In keras we are using these parameters:
     shear_range=0.2,
     fill_mode='nearest',
     zoom_range=0.2
+    
+    
+automatic splitting and augmetation (on version 3)
+
+perfect formatting, if you extract 5 frames from a video, and count of augmented will also be 5 
+output will be 
+
+    original_images [0,6,12,18,24] augmented=[1,2,3,4,5,7,8,9,10,11,13......29]
+
+for above configurations
+
+    from augVer2 import split_augment
+    split_augment('C:\\Users\\Ryuk666\\Downloads\\Live Surgery Foreign Body (BB) Removal from   Finger.mp4',ffmpeg_bin=your_ffmpeg_downloaded_binary_path,frame_number=5, count =5)
+
+SPLITING AND AUGMENTATION DOCS 
+            
+```split_augment(vid_path, ffmpeg_bin='C:\\Users\\Ryuk666\\Downloads\\Compressed\\ffmpeg-3.4-win64-static\\bin\\ffmpeg.exe',start=0, fps=1, frame_skip=0, count=0, frame_number=0 )```
+            
+ - vid_path = path to your input video.
+ - ffmpeg_bin = bath to your ffmpeg binary, in linux (ffmpeg_bin = 'ffmpeg') if installed using apt (default: Jibran'pc path).
+ - start = start count (default : 0, your image name will be wound_0.jpg).
+ - fps = frames per second (default: 1, 1 frame per sec).
+ - frame_skip = number of frame you wanna skip from start (default: 0, no frame loss).
+ - count = number of augment images (default: 0,  your image name will be wound_0.jpg,wound_1.jpg..., no augemented images).
+ - frame_number = how many frames you wanna extract from video (default: 0, total frames will be extracted ).
+
+
