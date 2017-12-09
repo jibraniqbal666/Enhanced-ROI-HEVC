@@ -1,0 +1,5 @@
+I am producing text file first with storing those values that are distinct for all images.
+After this, I am parsing text file and then producing JSON file accordingly.
+
+This method helped in preserving progress.
+For example, if at 1300th image, my program gets terminated, I can simply restart by changing image_id variable from 0 to 1299.
