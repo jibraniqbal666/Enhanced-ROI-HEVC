@@ -7,9 +7,9 @@ These are the video links that we are using to produce frames:
 
 3. https://www.youtube.com/watch?v=3o7cgZsd3bs (Live Surgery: Small Finger Extensor Tendon Saw Injury Cut Repair)
 
-As starting frames of videos are related to the introduction about surgical procedure so we are skipping these frames. Further, to avoid redundancy we are extracting 1 frame after every 15 frames. We are using ffmpeg tool with this command:
+As starting frames of videos are related to the introduction about surgical procedure so we are skipping these frames. Further, to avoid redundancy we are extracting 1 frame after every 60 frames. We are using ffmpeg tool with this command:
 
-    ffmpeg -i input_video.mp4 -vf "select=(not(lt(n\,1050)))*(not(mod(n\,15)))" -vsync vfr -q:v 2 wound_%d.jpg
+    ffmpeg -i input_video.mp4 -vf "select=(not(lt(n\,1050)))*(not(mod(n\,60)))" -vsync vfr -q:v 2 wound_%d.jpg
 In the above command, 1050 is the number of frames that we want to skip from beginning.
 
 To keep numbering your images where you left in the previous video, you can simply add <-start_number> argument in the above command.
@@ -25,7 +25,7 @@ In keras we are using these parameters:
     vertical_flip=True,
     shear_range=0.2,
     fill_mode='nearest',
-    zoom_range=0.2
+    zoom_range=0.15
     
     
 automatic splitting and augmetation (on version 3)
